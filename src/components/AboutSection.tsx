@@ -7,15 +7,16 @@ interface Props {
 
 const AboutSection: React.FC<Props> = ({ title, content }) => {
   return (
-    <div className="max-w-3xl mx-auto px-4 my-10">
-      <h2 className="text-2xl sm:text-3xl font-bold mt-10 mb-4 border-b border-gray-300 text-gray-800 animate-fade-in">
+    <section className="w-full px-4 my-12">
+      <h2 className="text-xl sm:text-2xl font-bold mt-10 mb-4 border-b border-gray-300 text-gray-800 animate-fade-in">
         {title}
       </h2>
-      <p className="custom-paragraph text-base sm:text-lg font-bold text-gray-800">
+      <p className="custom-paragraph whitespace-pre-line text-base sm:text-lg font-medium text-gray-800 leading-relaxed">
         {content}
       </p>
-    </div>
+    </section>
   );
 };
 
 export default AboutSection;
+

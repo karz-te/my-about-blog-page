@@ -86,3 +86,43 @@ body {
     width: 100%;
   }
 }
+
+/* subtle grid */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(16, 185, 129, 0.18)_receive 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: center;
+}
+
+/* tiny noise (CSS only, no images) */
+.hero-noise {
+  background-image:
+    radial-gradient(rgba(0,0,0,0.18) 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: 0 0;
+  mix-blend-mode: multiply;
+}
+
+/* scanning underline */
+.hero-scan {
+  background: linear-gradient(
+    90deg,
+    rgba(16,185,129,0) 0%,
+    rgba(16,185,129,0.85) 45%,
+    rgba(16,185,129,0) 100%
+  );
+  animation: hero-scan 3.8s ease-in-out infinite;
+}
+
+@keyframes hero-scan {
+  0%   { transform: translateX(-120%); opacity: 0.35; }
+  40%  { opacity: 0.9; }
+  100% { transform: translateX(260%); opacity: 0.35; }
+}
+
+/* reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  .hero-scan { animation: none; }
+}
